@@ -1,0 +1,9 @@
+[Core]
+Name = Nerd.nu Ban Appeals
+Module = appeals
+
+[Documentation]
+Description = Alerts for new ban appeals.
+
+[Python]
+Version = 3
