@@ -1,6 +1,6 @@
 FEED = "https://nerd.nu/forums/rss/forums/3-ban-appeals/"
 
-DELAY = 60
+DELAY = 300
 
 CHANNEL = "#redwalltest"
 

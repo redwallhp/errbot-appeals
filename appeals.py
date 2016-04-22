@@ -7,7 +7,7 @@ class Appeals(BotPlugin):
 
     def activate(self):
         super().activate()
-        task = ParserTask(self)
+        self.task = ParserTask(self)
 
     @botcmd
     def appeals(self, msg, args):
@@ -27,3 +27,9 @@ class Appeals(BotPlugin):
         self['BOOKMARK'] = ""
         self['APPEALS'] = ""
         return "Appeal cache reset."
+
+    @botcmd(admin_only=True)
+    def fetchappeals(self, msg, args):
+        """ Force reload the appeals feed """
+        self.task.run()
+        return "Reloaded appeals feed."
